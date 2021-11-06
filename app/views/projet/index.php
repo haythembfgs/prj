@@ -1,14 +1,59 @@
 <?php $this->view("projet/header",$data);?>
 
+<style>
+table {
+border-collapse: collapse;
+width: 100%;
+color: #588c7e;
+font-family: monospace;
+font-size: 25px;
+text-align: left;
+}
+th {
+background-color: #588c7e;
+color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style>
+</head>
+<body>
+
+
       <!-- MAIN -->
       <main role="main">
+       
         <!-- Content -->
         <article>
           <header class="section background-white">
             <div class="line text-center">        
               <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Be More with Less</h1>
-              <p class="margin-bottom-0 text-size-16 text-dark">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.<br>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+              <table>
+<tr>
+<th>Id</th>
+<th>Username</th>
+<th>email</th>
+<th>password</th>
+<th>date</th>
+</tr>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "projet_db");
+
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT id, username, email, password, date FROM users";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+
+while($row = $result->fetch_assoc()) {
+echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"
+. $row["email"] ."</td><td>" . $row["password"]. "</td><td>" . $row["date"]. "</td></tr>";
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>
+</table>
             </div>  
           </header>
 

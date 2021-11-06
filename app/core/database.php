@@ -75,6 +75,5 @@ Class Database
 			return false;
 		}
 	}
-
-
-}
+	
+	}
