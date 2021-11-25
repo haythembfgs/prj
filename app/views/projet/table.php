@@ -1,5 +1,4 @@
-
- <?php 
+<?php 
   session_unset();
   session_destroy();
   if(isset($_COOKIE[session_name()])){
@@ -26,10 +25,7 @@ class TableRows extends RecursiveIteratorIterator {
   }
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "projet_db";
+include '../app/core/config.php';
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
