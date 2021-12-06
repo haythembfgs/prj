@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?=ASSETS?>projet/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="<?=ASSETS?>projet/owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="<?=ASSETS?>projet/css/lightcase.css">
+    <link rel="stylesheet" href="<?=ASSETS?>projet/css/custom.css">
     <!-- CUSTOM STYLE -->      
     <link rel="stylesheet" href="<?=ASSETS?>projet/css/template-style.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet"> 

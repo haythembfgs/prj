@@ -1,21 +1,4 @@
 <?php $this->view("projet/header",$data);?>
-
-<style>
-table {
-border-collapse: collapse;
-width: 100%;
-color: #588c7e;
-font-family: monospace;
-font-size: 25px;
-text-align: left;
-}
-th {
-background-color: #588c7e;
-color: white;
-}
-tr:nth-child(even) {background-color: #f2f2f2}
-</style>
-</head>
 <body>
 
 
@@ -31,16 +14,14 @@ tr:nth-child(even) {background-color: #f2f2f2}
               
               
               
-              <?php if(isset($_SESSION['user_name'])==NULL){    
+              <?php
+              if(isset($_SESSION['user_name'])==NULL){    
                 // Haven't log in
-              echo "You haven't log in";
-            }else{
-              // Logged in
-              $this->view("projet/table",$data);
-              
-            }
-              
-              
+                echo "You haven't log in";
+              }else{
+                // Logged in
+                echo "You are log in : <a href='http://localhost/prj/public/user_ctrl'>clic here</a>";
+              }
               ?>
               
             </div>  

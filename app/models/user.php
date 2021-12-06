@@ -101,5 +101,11 @@ Class User
 		die;
 	}
 
+	function getTableUser()
+	{
+		$DB = new Database();
+		$result = $DB->read("SELECT id, username, password , email, date FROM users");
+		return $result;
+	}
 
 }

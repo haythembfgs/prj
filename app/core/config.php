@@ -1,5 +1,4 @@
 <?php 
-
 define('WEBSITE_TITLE', "PHP Login System");
 
 
