@@ -4,8 +4,13 @@ Class Home extends Controller
 {
 	function index()
 	{
- 	 	
- 	 	$data['page_title'] = "Home";
+        if(isset($_SESSION['user_name'])==NULL){
+			// Haven't log in
+            header("Location: login");
+            die();
+        }
+
+		$data['page_title'] = "Home";
 
  	 	$posts = $this->loadModel("posts");
  	 	$result = $posts->get_all();
@@ -25,13 +30,7 @@ Class Home extends Controller
  	 			$data['posts'][$key]->image = $image_class->get_thumbnail($data['posts'][$key]->image);
  	 		}
  	 	}
-		  if(isset($_SESSION['user_name'])==NULL){    
-			// Haven't log in
-			$this->view("projet/login",$data);
-		  }else{
-			// Logged in
-			$this->view("projet/index",$data);
-		  }
+		$this->view("projet/index",$data);
 	}
 
 }
