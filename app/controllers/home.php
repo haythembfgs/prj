@@ -25,7 +25,13 @@ Class Home extends Controller
  	 			$data['posts'][$key]->image = $image_class->get_thumbnail($data['posts'][$key]->image);
  	 		}
  	 	}
-		$this->view("projet/index",$data);
+		  if(isset($_SESSION['user_name'])==NULL){    
+			// Haven't log in
+			$this->view("projet/login",$data);
+		  }else{
+			// Logged in
+			$this->view("projet/index",$data);
+		  }
 	}
 
 }
