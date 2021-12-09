@@ -32,7 +32,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user3">
+                            <img href="<?=ASSETS?>img/team-4.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm"><?=$user->username?></h6>
@@ -51,9 +51,14 @@
                         <span class="text-secondary text-xs font-weight-bold"><?=$user->date?></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        <button Type = "submit" name = "editbtn" class="btn btn-lg bg-gradient-success">
                           Edit
-                        </a>
+                        </button>
+                      </td>
+                      <td class="align-middle">
+                        <button Type = "submit" name = "editbtn" class="btn btn-lg bg-gradient-danger">
+                          Delete
+                        </button>
                       </td>
                     </tr>
                     <?php } ?>

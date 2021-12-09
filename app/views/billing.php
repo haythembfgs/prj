@@ -1,10 +1,10 @@
 <?php include("includes/header.php"); ?>
 <?php include("includes/sidenav.php"); ?>
-<?php include("includes/navbar.php"); ?>
 
-<body class="g-sidenav-show  bg-gray-200">
 
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <?php $this->view("includes/navbar",$data);?>
+ 
     <!-- Navbar -->
 
     <!-- End Navbar -->
@@ -15,7 +15,7 @@
             <div class="col-xl-6 mb-xl-0 mb-4">
               <div class="card bg-transparent shadow-xl">
                 <div class="overflow-hidden position-relative border-radius-xl">
-                  <img src="../assets/img/illustrations/pattern-tree.svg" class="position-absolute opacity-2 start-0 top-0 w-100 z-index-1 h-100" alt="pattern-tree">
+                  <img href="<?=ASSETS?>img/illustrations/pattern-tree.svg" class="position-absolute opacity-2 start-0 top-0 w-100 z-index-1 h-100" alt="pattern-tree">
                   <span class="mask bg-gradient-dark opacity-10"></span>
                   <div class="card-body position-relative z-index-1 p-3">
                     <i class="material-icons text-white p-2">wifi</i>
@@ -32,7 +32,7 @@
                         </div>
                       </div>
                       <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
-                        <img class="w-60 mt-2" src="../assets/img/logos/mastercard.png" alt="logo">
+                        <img class="w-60 mt-2" href="<?=ASSETS?>img/logos/mastercard.png" alt="logo">
                       </div>
                     </div>
                   </div>
@@ -89,14 +89,14 @@
                   <div class="row">
                     <div class="col-md-6 mb-md-0 mb-4">
                       <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                        <img class="w-10 me-3 mb-0" src="../assets/img/logos/mastercard.png" alt="logo">
+                        <img class="w-10 me-3 mb-0" href="<?=ASSETS?>img/logos/mastercard.png" alt="logo">
                         <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
                         <i class="material-icons ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                        <img class="w-10 me-3 mb-0" src="../assets/img/logos/visa.png" alt="logo">
+                        <img class="w-10 me-3 mb-0" href="<?=ASSETS?>img/logos/visa.png" alt="logo">
                         <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;5248</h6>
                         <i class="material-icons ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
                       </div>
@@ -320,40 +320,7 @@
           </div>
         </div>
       </div>
-      <footer class="footer py-4  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                for a better web.
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
-  </main>
   <div class="fixed-plugin">
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
       <i class="material-icons py-2">settings</i>
@@ -428,5 +395,6 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <?php include("includes/footer.php"); ?>
   <?php include("includes/scripts.php"); ?>
+  <?php include("includes/footer.php"); ?>
+  

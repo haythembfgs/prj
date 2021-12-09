@@ -1,10 +1,11 @@
 <?php include("includes/header.php"); ?>
 <?php include("includes/sidenav.php"); ?>
-<?php include("includes/navbar.php"); ?>
+
 
 <body class="g-sidenav-show  bg-gray-200">
   
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  <?php include("includes/navbar.php"); ?>
     <!-- Navbar -->
     
     <!-- End Navbar -->
