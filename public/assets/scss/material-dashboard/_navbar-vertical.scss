@@ -73,7 +73,7 @@
           box-shadow: none;
 
           .navbar-collapse {
-            display: block;
+            display: contents;
             overflow: auto;
             height: $navbar-vertical-inner;
           }
