@@ -18,7 +18,7 @@ Class Login extends Controller
  	 		$user->login($_POST);
  	 	}
 
-		$this->view("projet/login",$data);
+		$this->view("login",$data);
 	}
 
 }

@@ -18,7 +18,7 @@ Class Signup extends Controller
  	 		$user->login($_POST);
  	 	}
  	 	
-		$this->view("projet/signup",$data);
+		$this->view("signup",$data);
 	}
 
 }

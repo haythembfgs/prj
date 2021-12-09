@@ -9,7 +9,7 @@ Class Single_post extends Controller
 		{
 
 			$data['page_title'] = "Image not found";
-			$this->view("projet/not_found",$data);
+			$this->view("not_found",$data);
 		}else{
 
 	 	 	$posts = $this->loadModel("posts");
@@ -18,7 +18,7 @@ Class Single_post extends Controller
 	 	 	$data['post'] = $result;
 	 	 	
 	 	 	$data['page_title'] = "Single Post";
-			$this->view("projet/single_post",$data);
+			$this->view("single_post",$data);
 		}
 
 	}

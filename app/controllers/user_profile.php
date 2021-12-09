@@ -1,6 +1,6 @@
 <?php
 
-Class User_ctrl extends Controller 
+Class User_profile extends Controller 
 {
 	function index()
 	{
@@ -13,7 +13,7 @@ Class User_ctrl extends Controller
         $user = $this->loadModel("user");
         $data = $user->getTableUser();
   
-        $this->view("user_list",$data);
+        $this->view("profile",$data);
     }
 
 }

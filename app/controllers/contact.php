@@ -6,7 +6,7 @@ Class Contact extends Controller
 	{
  	 	
  	 	$data['page_title'] = "Contact Us";
-		$this->view("projet/contact",$data);
+		$this->view("contact",$data);
 	}
 
 }

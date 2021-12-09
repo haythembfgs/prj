@@ -27,7 +27,7 @@ Class Upload extends Controller
  	 	}
  	 	
  	 	$data['page_title'] = "Upload";
-		$this->view("projet/upload",$data);
+		$this->view("upload",$data);
 	}
 
 

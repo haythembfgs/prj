@@ -30,7 +30,7 @@ Class Home extends Controller
  	 			$data['posts'][$key]->image = $image_class->get_thumbnail($data['posts'][$key]->image);
  	 		}
  	 	}
-		$this->view("projet/index",$data);
+		$this->view("index",$data);
 	}
 
 }
