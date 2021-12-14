@@ -38,9 +38,8 @@
                   </div>
                 </div>
               </div>
-              <form action="code.php" method="POST">
                 <div class="card-body">
-                  <form role="form">
+                  <form role="form" action="code.php" method="POST">
                     <div class="input-group input-group-outline mb-3">
                       <label class="form-label">Name</label>
                       <input type="text" name="username" class="form-control">

@@ -108,4 +108,32 @@ Class User
 		return $result;
 	}
 
+	function getUserById($id)
+	{
+		$DB = new Database();
+		$result = $DB->read("SELECT id, username, password , email, date FROM users WHERE id=$id");
+		return $result;
+	}
+
+	function updateUserById($id, $username, $email, $password)
+	{
+		$DB = new Database();
+		$sql = ("UPDATE `users` SET `username`='".$username."',`email`='".$email."',`password`= $password WHERE `id` = $id");
+		// le model appele le Database (DAO) et pas mysqli
+		if(false === $DB->write($sql)) {
+			return mysql_error();
+		}
+		 
+		return true;
+	}
+
+	function deleteUserById($id)
+	{
+		$DB = new Database();
+		$sql = ("DELETE from users WHERE `id` = $id");
+		if(false === $DB->write($sql)) {
+			return mysql_error();
+		}
+		return true;
+	}
 }
