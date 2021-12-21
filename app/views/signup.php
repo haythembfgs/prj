@@ -33,16 +33,16 @@
                 <div class="card-body">
                 <p><?php check_message() ?></p>
                   <form role="form" action="signup" method="post" class="text-start">
+                  <label class="form-label"><b>Nom d'utilisateur</b></label>
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Nom d'utilisateur</label>
                       <input type="text" name="username" class="form-control">
                     </div>
+                    <label class="form-label"><b>Email</b></label>
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Email</label>
                       <input type="email" name="email" class="form-control">
                     </div>
+                    <label class="form-label"><b>Password</b></label>
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Password</label>
                       <input type="password" name="password" class="form-control">
                     </div>
                     <div class="form-check form-check-info text-start ps-0">

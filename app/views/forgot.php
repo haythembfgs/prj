@@ -18,7 +18,7 @@
             <div class="card z-index-0 fadeIn3 fadeInBottom">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                  <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
+                  <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Reset your password</h4>
                   <div class="row mt-3">
                     <div class="col-2 text-center ms-auto">
                       <a class="btn btn-link px-3" href="javascript:;">
@@ -40,29 +40,17 @@
               </div>
               <div class="card-body">
                 <p><?php check_message() ?></p>
-                <form role="form" action="login" method="post" class="text-start">
-               <b> <label class="form-label">Nom d'utilisateur</label></b>
+                <form role="form" action="forgot" method="post" class="text-start">
+               <b> <label class="form-label">Your Email</label></b>
                   <div class="input-group input-group-outline my-3">
-                     <input type="text" name="username" class="form-control">
-                  </div>
-                  <b><label class="form-label">Password</label></b>
-                  <div class="input-group input-group-outline mb-3">
-                    <input type="password" name="password" class="form-control">
-                  </div>
-                  <div class="form-check form-switch d-flex align-items-center mb-3">
-                    <input class="form-check-input" type="checkbox" id="rememberMe">
-                    <label class="form-check-label mb-0 ms-2" for="rememberMe">Remember me</label>
+                     <input type="text" name="email" class="form-control">
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
+                    <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Reset Password</button>
                   </div>
                   <p class="mt-4 text-sm text-center">
-                    Forgot Your password?
-                    <a href="forgot" class="text-primary text-gradient font-weight-bold">Reset Password</a>
-                  </p>
-                  <p class="mt-4 text-sm text-center">
-                    Don't have an account?
-                    <a href="signup" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                    Do you have an account?
+                    <a href="login" class="text-primary text-gradient font-weight-bold">Log in</a>
                   </p>
                 </form>
               </div>

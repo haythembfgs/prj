@@ -10,6 +10,11 @@ define('DB_HOST','localhost');
 
 /*protocal type http or https*/
 define('PROTOCAL','http');
+/* smtp */
+define('HOST_SMTP','smtp.gmail.com');
+define('FROM_SMTP','canevas2022@gmail.com');
+define('PASS_SMTP','dev$$spintechs');
+define('PORT_SMTP',587);
 
 /*root and asset paths*/
 

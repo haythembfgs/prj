@@ -32,6 +32,7 @@ Class User
 		}else{
 
 			$_SESSION['error'] = "please enter a valid username and password";
+			$_SESSION['error'] = "or reset the password";
 		}
 
 	}
@@ -55,6 +56,7 @@ Class User
 			$data = $DB->write($query,$arr);
 			if($data)
 			{
+				Mail::sendEmailNotif();
 				
 				header("Location:". ROOT . "login");
 				die;
@@ -115,6 +117,30 @@ Class User
 		return $result;
 	}
 
+	function forgot($email)
+	{
+		$DB = new Database();
+		$result = $DB->read("SELECT * FROM users WHERE email='$email'");
+		if ($result) {
+			$token = $result[0]->url_address;
+			$url = $_SERVER['HTTP_REFERER'] . "?token=" . $token;
+			$body = 'Bonjour, <br> Pour le réinitialisation de votre mot de passe cliquer <a href="' . $url . '">ici</a>, <br> Cordialement,';
+			$bool = Mail::sendEmailNotif($email, 'Réinitialisation Mot de passe', $body);
+			return $bool;
+		}
+		return false;
+	}
+
+	function checkToken($token)
+	{
+		$DB = new Database();
+		$result = $DB->read("SELECT * FROM users WHERE url_address='$token'");
+		if ($result) {
+			return $result;
+		}
+		return false;
+	}
+	
 	function updateUserById($id, $username, $email, $password)
 	{
 		$DB = new Database();
@@ -136,4 +162,17 @@ Class User
 		}
 		return true;
 	}
+
+	function resetUserById($id, $password)
+	{
+		$DB = new Database();
+		$sql = ("UPDATE `users` SET `password`= $password WHERE `id` = $id");
+		// le model appele le Database (DAO) et pas mysqli
+		if(false === $DB->write($sql)) {
+			return mysql_error();
+		}
+		 
+		return true;
+	}
+	
 }

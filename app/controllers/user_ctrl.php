@@ -25,8 +25,6 @@ Class User_ctrl extends Controller
                 die();
             }
             
-        }
-        if(isset($_GET['id']) && isset($_GET['action'])) {
             // pour verifie le type de l'action a executé
             if($_GET['action'] == 'delete') {
                 // pour recuper que le user avec id
